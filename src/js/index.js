@@ -1,9 +1,24 @@
-import leftPad from './leftpad';
 
-const serNos = [6934, 23111, 23114, 1001, 211161, 'abc', '111'];
-const partEl = document.getElementById('part-list');
-const strList = serNos.reduce(
-  (acc, element) => acc += `<li>${leftPad(element, 8, '0')}</li>`, ''
-);
+window.onload = () => {
+  document.querySelector('.card').classList.add(generateRandomSuit());
+  document.querySelector('.card').innerHTML = (generateRandomNumber());
+};
 
-partEl.innerHTML = strList;
+
+let generateRandomNumber = () => {
+  
+  let numbers = ['A', '2', '3', '4', '5','6','7','8','9','10','J','Q', 'K'];
+  let indexNumbers = Math.floor(Math.random() * numbers.length);
+  return numbers[indexNumbers];
+
+};
+
+
+let generateRandomSuit = () =>{
+
+
+  var suit = ["diamond", "spade", "heart", "club"];
+  let indexSuit = Math.floor(Math.random() * suit.length);
+  return suit[indexSuit];
+};
+

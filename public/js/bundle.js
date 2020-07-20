@@ -90,23 +90,10 @@
 /*!*************************!*\
   !*** ./src/js/index.js ***!
   \*************************/
-/*! no exports provided */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports) {
 
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _leftpad__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./leftpad */ \"./src/js/leftpad.js\");\n\nvar serNos = [6934, 23111, 23114, 1001, 211161, 'abc', '111'];\nvar partEl = document.getElementById('part-list');\nvar strList = serNos.reduce(function (acc, element) {\n  return acc += \"<li>\".concat(Object(_leftpad__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(element, 8, '0'), \"</li>\");\n}, '');\npartEl.innerHTML = strList;\n\n//# sourceURL=webpack:///./src/js/index.js?");
-
-/***/ }),
-
-/***/ "./src/js/leftpad.js":
-/*!***************************!*\
-  !*** ./src/js/leftpad.js ***!
-  \***************************/
-/*! exports provided: default, leftPad */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return leftPad; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"leftPad\", function() { return leftPad; });\nfunction leftPad(str, len, ch) {\n  var cache = [\"\", \" \", \"  \", \"   \", \"    \", \"     \", \"      \", \"       \", \"        \", \"         \"];\n  str = str + \"\";\n  len = len - str.length;\n  if (len <= 0) return str;\n  if (!ch && ch !== 0) ch = \" \";\n  ch = ch + \"\";\n  if (ch === \" \" && len < 10) return function () {\n    cache[len] + str;\n  };\n  var pad = \"\";\n\n  while (true) {\n    if (len & 1) pad += ch;\n    len >>= 1;\n    if (len) ch += ch;else break;\n  }\n\n  return \"\".concat(pad).concat(str);\n}\n\n\n//# sourceURL=webpack:///./src/js/leftpad.js?");
+eval("window.onload = function () {\n  document.querySelector('.card').classList.add(generateRandomSuit());\n  document.querySelector('.card').innerHTML = generateRandomNumber();\n};\n\nvar generateRandomNumber = function generateRandomNumber() {\n  var numbers = ['A', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K'];\n  var indexNumbers = Math.floor(Math.random() * numbers.length);\n  return numbers[indexNumbers];\n};\n\nvar generateRandomSuit = function generateRandomSuit() {\n  var suit = [\"diamond\", \"spade\", \"heart\", \"club\"];\n  var indexSuit = Math.floor(Math.random() * suit.length);\n  return suit[indexSuit];\n};\n\n//# sourceURL=webpack:///./src/js/index.js?");
 
 /***/ })
 
