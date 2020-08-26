@@ -34,6 +34,7 @@ let generateRandomCard = () => {
       ranks[rankIndex],
       
    ];
+  //creating our HTML dynamically
    document.querySelector(".card").innerHTML += 
    
    "<span class='top-corner'>&" + suit[1] + 
