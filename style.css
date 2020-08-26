@@ -4,7 +4,7 @@ body{
 }
 
 
-.card::before{
+.top-corner{
   
   position: absolute;
   top: 20px;
@@ -14,7 +14,7 @@ body{
 
 .card{
   text-align: center;
-  display: block;
+  display: inline-block;
   background: white;
   margin: auto;
   height: 200px;
@@ -30,52 +30,52 @@ body{
 
 }
 
-/*  SPADE */
-.card.spade:before{
-  content: '\2660';
-}
-
-.card.spade:after{
-  content: '\2660';
-}
-
-
-.card::after{
+.bottom-corner{
+  
   position: absolute;
   bottom: 20px;
   right: 20px;
   font-size: 80px;
 }
 
-/*  CLUB  */
-.card.club:before{
-  content: '\2663';
+/*  SPADE */
+.top-corner .spade{
+  content: "\2660";
 }
 
-.card.club:after{
-  content: '\2663';
+.bottom-corner .spade{
+  content: "\2660";
+}
+
+/*  CLUB  */
+.top-corner .club{
+  content: "\2663";
+}
+
+.bottom-corner .club{
+  content: "\2663";
 }
 
 
 /* HEART  */
-.card.heart:before{
-  content: '\2665';
+.top-corner .hearts{
+  content: "\2665";
   color: red;
 }
 
-.card.heart:after{
-  content: '\2665';
+.bottom-corner .hearts{
+  content: "\2665";
   color: red;
 }
 
 /* diamond  */
-.card.diamond:before{
-  content: '\2666';
+.top-corner .diams{
+  content: "\2666";
   color: red;
 }
 
-.card.diamond:after{
-  content: '\2666';
+.bottom-corner .diams{
+  content: "\2666";
   color: red;
 }
 
